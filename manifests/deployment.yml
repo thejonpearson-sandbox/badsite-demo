@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: www-deployment
+  labels:
+    app: www
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: www
+  template:
+    metadata:
+      labels:
+        app: www
+    spec:
+      containers:
+      - image: ifunky/site:latest
+        resources:
+          limits:
+            cpu: "1"
+          requests:
+            cpu: "0.5"    
+        name: www
+        ports:
+        - containerPort: 80
