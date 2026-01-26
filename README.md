@@ -1,4 +1,4 @@
-# Demo Blog Site
+# Demo Blog Site.
 This site is purposly built to be bad to test your security tooling!
 
 ## What's in here?
